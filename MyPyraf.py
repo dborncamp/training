@@ -14,7 +14,7 @@ print ' Found files: \n'
 print filelist
 
 for file in filelist:
-   query=os.access(file+'1.coo.1')
+   query=os.access(file+'1.coo.1',os.R_OK)
    if query:
       os.remove(file+'1.coo.1')
    iraf.daofind(image=file+'[1]', interactive='no', verify='no')
